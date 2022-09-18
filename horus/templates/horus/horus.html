@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+
+{% block title %} {% endblock %}
+
+{% block header %} 
+
+{% endblock %}
+
+{% block content %} 
+<body>
+    <form method="post" name="form1">
+        {% csrf_token %}
+        <main class="px-10">
+            <h5>¡Bienvenido observador!</h5>
+            <p class="lead">Para obtener tu link observador ingrese un correo a donde se enviaran los datos</p>
+            <input type="email" name="email" id="id_email" maxlength="50" style="width: 220px; margin-bottom: 10px;"><br>
+            <button type="submit" class="btn btn-primary btn-sm">General link</button><br><br>
+            <p class="lead">El link "observador" expirara en 24horas, si en este tiempo el link no es usado este se eliminara.
+                Horus no guarda "correos" ni datos alternos de nuestros observadores y observados.</p>
+            
+            
+        </main>
+    </form>
+</body>
+{% endblock %}
